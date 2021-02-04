@@ -93,7 +93,7 @@ body > .container > .row > .col-lg-12 > .caramel {
 
 
 .will-update .caramel-view {
-	transition:transform 750ms cubic-bezier(.25,0,.25,1);
+	transition:transform 1750ms cubic-bezier(.25,0,.25,1);
 }
 
 .updating-forward .caramel-view {	
