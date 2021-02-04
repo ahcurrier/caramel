@@ -1,0 +1,258 @@
+.caramel {
+	position:relative;
+	margin:24px 0;
+	padding:0;
+	overflow:hidden;
+}
+
+.caramel h6 {
+	font-weight:normal;
+}
+
+.caramel-view-wrap,
+.caramel-caption {
+	position:relative;
+	padding:0 10%;
+	margin:0;
+}
+
+body > div > section > .container > .row > .col-lg-12 > * > .caramel,
+body > div > .container > .row > .col-lg-12 > * > .caramel,
+body > section > .container > .row > .col-lg-12 > * > .caramel,
+body > .container > .row > .col-lg-12 > * > .caramel,
+body > div > section > .container > .row > .col-lg-12 > .caramel,
+body > div > .container > .row > .col-lg-12 > .caramel,
+body > section > .container > .row > .col-lg-12 > .caramel,
+body > .container > .row > .col-lg-12 > .caramel {
+	overflow:visible;
+	padding:0 10%;
+}
+
+@media(max-width:480px) {
+	.caramel {
+		margin-left:-15px;
+		margin-right:-15px;
+	}	
+}
+
+
+.caramel-view {
+	position:relative;
+	width:500%;
+	height:0;
+	margin:0;
+	padding:0 0 56.25%;
+	z-index:45;
+	transform:translateX(-40%);
+}
+
+.caramel-view > div {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
+
+.caramel-view > div > div {
+	position:relative;
+	width:20%;	
+	height:100%;
+	float:left;
+}
+
+.caramel-view > div > div > div {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background-size:cover;
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+.caramel-view > div > div > iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.caramel-items {
+	position:relative;
+	height:32px;
+	margin:0;
+	padding:0;
+	display:none;
+}
+.caramel-items > .item {
+	display:none;
+}
+
+
+.will-update .caramel-view {
+	transition:transform 750ms cubic-bezier(.25,0,.25,1);
+}
+
+.updating-forward .caramel-view {	
+	transform:translateX(-60%);
+}
+
+.updating-backward .caramel-view {	
+	transform:translateX(-20%);
+}
+
+.caramel-nav {
+	display:block;
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:10%;
+	z-index:65;
+	font-family: FontAwesome;
+	color:white;
+	background-color:rgba(127,127,127,0.1);
+	transition:none;
+	cursor:pointer;
+}
+
+.caramel-nav:hover {
+	color:rgba(255,255,255,1);
+	background-color:rgba(0,0,0,0.1);
+}
+
+.caramel-nav > i {
+	display:block;
+	position:absolute;
+	font-size:5vw;
+	line-height:1;
+	width:100%;
+	top:50%;
+	margin-top:-2.5vw;
+	-webkit-text-stroke: 1px #222;
+}
+
+.prev {
+	left:0;
+}
+
+.next {
+	right:0;
+	text-align:right;
+}
+
+.caramel .caramel-dots-wrap {
+	position:relative;
+	text-align:center;
+	z-index:75;
+}
+
+.caramel-dots-wrap > a {
+	display:inline-block;
+	background-position:center center;
+	background-repeat:no-repeat;
+	cursor:pointer;
+	box-sizing:border-box;
+	background-clip: content-box;
+	background-color: rgba(0,0,0,0.4);
+	transition:none;
+}
+
+.caramel.dots .caramel-dots-wrap > a.current-dot,
+.caramel.thumbnails .caramel-dots-wrap > a.current-dot,
+.caramel-dots-wrap > a.current-dot {
+	opacity:1;
+}
+
+.caramel.dots .caramel-dots-wrap {
+	height:32px;
+}
+
+.caramel.dots .caramel-dots-wrap > a {
+	width:16px;
+	height:16px;
+	margin:14px 4px 0;
+	background-size:auto 200%;
+	border-radius:50%;
+	opacity:0.5;
+	border: 1px dashed gray;
+	background-clip: border-box;
+}
+
+.caramel.dots .caramel-dots-wrap > a.current-dot {
+	border:2px solid black;
+}
+
+.caramel.thumbnails.no-captions .caramel-dots-wrap > a > h6,
+.caramel.dots .caramel-dots-wrap > a > h6 {
+	display:none;
+}
+
+.caramel.thumbnails .caramel-dots-wrap {
+	height:62px;
+	margin-bottom:62px;
+}
+
+.caramel.thumbnails .caramel-dots-wrap > a {
+	width:64px;
+	height:48px;
+	margin:14px 4px 0;
+	background-size:cover;
+	position:relative;
+	border:0;
+	opacity:0.6;
+}
+
+.caramel.thumbnails .caramel-dots-wrap > a:hover {
+	color:#009ed0;
+	opacity:1;
+}
+
+.caramel.thumbnails .caramel-dots-wrap > a > h6 {
+	display:block;
+	font-weight: 400;
+	line-height:1;
+	font-size:11px;
+	position:absolute;
+	top:100%;
+	margin:0;
+	padding:6px 0;
+}
+
+
+.caramel.no-captions .caramel-caption,
+.caramel.no-captions .caramel-dots-wrap > a > h6 {
+	display:none;
+}
+
+.caramel-caption {
+	min-height:90px;
+	margin-bottom:0;
+}
+
+.caramel-caption,
+.caramel-caption p {
+	font-size:14px;
+	line-height:1.25;
+	font-weight:400;
+}
+
+.caramel-caption p:last-child {
+	margin-bottom:0;
+}
+
+.caramel-caption h6 {
+	font-weight:600;
+	font-size:20px;
+}
+
+.caramel.dots .caramel-dots-wrap > a {
+	width:12px;
+	height:12px;
+}
+
+.caramel.dots .caramel-dots-wrap > a {
+	margin:14px 7px;
+}
